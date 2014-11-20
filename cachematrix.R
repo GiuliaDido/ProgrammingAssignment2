@@ -6,9 +6,9 @@
 
 makeCacheMatrix <- function(mat=matrix()) {
      
-     inv <- NULL # here the inverse matrix is inicialized
+     inv <- NULL # here the inverse matrix is initialized as NULL
      get <- function() mat # get returns the initial matrix 
-     setinv <- function(solve) inv <<- solve # the solution is stored into inv, using a calculated of cached value
+     setinv <- function(solution) inv <<- solution # the solution is stored into inv, using a calculated of cached value
      getinv <- function() inv # getinv returns the inverse matrix
      list(get=get, setinv=setinv, getinv=getinv)
      
